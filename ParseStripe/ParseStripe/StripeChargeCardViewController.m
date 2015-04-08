@@ -44,6 +44,7 @@
     self.pickerData = @[@"5",@"10",@"15",@"20",@"25",@"30",@"35",@"40",@"45",@"50"];
     self.pickerView.dataSource = self;
     self.pickerView.delegate = self;
+    self.price = @5;
 }
 
 - (void)didReceiveMemoryWarning {
