@@ -13,16 +13,19 @@
 #import "STPAPIClient.h"
 #import "STPToken.h"
 
-@interface StripeChargeCardViewController () <PTKViewDelegate>
+@interface StripeChargeCardViewController () <PTKViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property(weak, nonatomic) PTKView *paymentView;
-
 @property STPToken *userToken;
 
 @property (weak, nonatomic) IBOutlet UIButton *payButton;
 - (IBAction)pay:(id)sender;
 
 - (void)createOneTimeCharge:(STPToken *)token;
+
+@property NSNumber *price;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
+@property (strong, nonatomic) NSArray *pickerData;
 
 @end
 
@@ -37,11 +40,16 @@
     
     self.payButton.layer.cornerRadius = 25;
     self.payButton.enabled = false;
+    
+    self.pickerData = @[@"5",@"10",@"15",@"20",@"25",@"30",@"35",@"40",@"45",@"50"];
+    self.pickerView.dataSource = self;
+    self.pickerView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
@@ -98,7 +106,7 @@
     [PFCloud callFunctionInBackground:@"ChargeWithCard"
                        withParameters:@{
                                         @"token" : token.tokenId,
-                                        @"price" : @5.0
+                                        @"price" : self.price
                                         }
                                 block:^(NSString *result, NSError *error) {
                                     if (!error) {
@@ -109,6 +117,24 @@
                                 }];
 }
 
+#pragma mark - Picker View
 
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 1;
+}
+
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    return self.pickerData.count;
+}
+
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    return self.pickerData[row];
+}
+
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    NSInteger priceSelected = (1 + row) * 5;
+    self.price = [NSNumber numberWithInteger:priceSelected];
+    NSLog(@"%@",self.price);
+}
 
 @end
