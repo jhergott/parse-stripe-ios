@@ -1,0 +1,11 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+
+target 'ParseStripe' do
+	pod 'Stripe' 
+end
+
+target 'ParseStripeTests' do
+	pod 'Stripe' 
+end
+
