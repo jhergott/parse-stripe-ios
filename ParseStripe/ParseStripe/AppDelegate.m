@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "Stripe.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,9 @@
     [Parse setApplicationId:@"HHYPyMJw63rmaf8EHIYnPtRgrV06ESp9mf1mQ69Y"
                   clientKey:@"WxprxkWapOlfiCROx7dG9Jzwyv0ZWKtE69ZbDPZW"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    [Stripe setDefaultPublishableKey:@"pk_test_QkeQIbKScSBPWMR3UwKmBvcP"];
+    
     return YES;
 }
 

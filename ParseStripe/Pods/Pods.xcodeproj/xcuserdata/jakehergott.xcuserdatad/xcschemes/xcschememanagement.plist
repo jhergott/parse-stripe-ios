@@ -4,12 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-ParseStripe-PaymentKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ParseStripe-Stripe.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-ParseStripe.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ParseStripeTests-PaymentKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,22 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0100183BF990F25C9516641A</key>
+		<key>0DD1B6E6F03CF20E1214183D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>34084BE2ED0599F3A8F04604</key>
+		<key>2C46FA3905E16A9C9EFE681C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5EEA6D145F1D61B19802FDB3</key>
+		<key>793CD30B4FF45A0AEB89EF49</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DF158A8986660BB157EE38AA</key>
+		<key>7B7AF36767580AED611306BE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BC709260F2C1DA3FCFBB695C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CB3ED9139DABB0FB9ED591BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

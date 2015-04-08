@@ -3,9 +3,11 @@
 
 target 'ParseStripe' do
 	pod 'Stripe' 
+	pod 'PaymentKit'
 end
 
 target 'ParseStripeTests' do
 	pod 'Stripe' 
+	pod 'PaymentKit'
 end
 
