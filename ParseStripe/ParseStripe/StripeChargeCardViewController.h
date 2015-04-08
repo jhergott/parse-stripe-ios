@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  StripeChargeCardViewController.h
 //  ParseStripe
 //
 //  Created by Jake Hergott on 4/8/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface StripeChargeCardViewController : UIViewController
 
 @end
-

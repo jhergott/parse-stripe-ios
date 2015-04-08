@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "StripeGithubExample": {
+            "applicationId": "HHYPyMJw63rmaf8EHIYnPtRgrV06ESp9mf1mQ69Y", 
+            "masterKey": "yorfysji4pHgAqYrc6kaz4mwUbPcSZUOrBxqMUts"
+        }, 
+        "_default": {
+            "link": "StripeGithubExample"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.4.0"
+    }
+}
